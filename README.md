@@ -56,6 +56,8 @@ In `prepare(for segue: UIStoryboardSegue, sender: Any?)` method you should write
 ```
 
 *Presented frame and position of `InfoDescriptionPopoverViewController` controlled by `myPopoverPresentationController` (see the code)*
+
 *You can customize appearance and animations by check the code, it's really simple*
+
 *If you need to add more you can subclass or edit files, but usually title and description is enouth by most popovers.*
 Enjoy!
