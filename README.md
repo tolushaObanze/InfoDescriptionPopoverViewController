@@ -2,7 +2,7 @@
 
 ## Current Syntax : Swift 3
 
-This is Popover Controller used to show detailed description and title of pressed content of parent view controller.
+This is Popover Controller used to show detailed description and title of pressed content of parent view controller. As opposite to apple Popover Controller, this controller presented at the center of the screen and don't has triangle view
 
 **This Popover View Controller works in conjuction with MyPopoverPresentationController (See my other repository about detailed explanation)**
 
@@ -19,7 +19,7 @@ It has Close button, to close the controller
     * closeButton - Bottom and centered
     * descriptionTextView - all other space between `titleLabel` and `closeButton`
     (See the picture of my setup)
-    ![Alt text](/../<master>/expamle.png?raw=true "example)
+    ![Alt text](/../<master>/example.png?raw=true "example)
 
 ###Storyboard Segue setup:
   * `Kind:` Present Modally
@@ -54,6 +54,7 @@ In `prepare(for segue: UIStoryboardSegue, sender: Any?)` method you should write
 }
 ```
 
+*Presented frame and position of `InfoDescriptionPopoverViewController` controlled by `myPopoverPresentationController (see the code)*`
 *You can customize appearance and animations by check the code, it's really simple*
-
+*If you need to add more you can subclass or edit files, but usually title and description is enouth by most popovers.*
 Enjoy!
