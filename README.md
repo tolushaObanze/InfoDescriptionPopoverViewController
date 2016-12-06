@@ -19,6 +19,7 @@ It has Close button, to close the controller
     * closeButton - Bottom and centered
     * descriptionTextView - all other space between `titleLabel` and `closeButton`
     (See the picture of my setup)
+    ![Alt text](/../<master>/expamle.png?raw=true "example)
 
 ###Storyboard Segue setup:
   * `Kind:` Present Modally
