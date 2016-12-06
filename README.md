@@ -22,15 +22,22 @@ It has Close button, to close the controller
 
 ###Storyboard Segue setup:
   * `Kind:` Present Modally
+  * Don't forget to add segue identifier
 
 ### ParentViewController setup:
-In `perfom(segue: etc...` method you should write the following:
+
+declare constant for custom animation controller:
+`let myPopoverPresentationController = MyPopoverPresentationController()`
+
+In `prepare(for segue: UIStoryboardSegue, sender: Any?)` method you should write the following:
   ```
-  destinationVC.modalPresentationStyle = .custom
+  // Check your segue identifier first
+ let destinationVC = segue.destination as! InfoDetailPopoverViewController
+ destinationVC.modalPresentationStyle = .custom
  destinationVC.transitioningDelegate = self
- destinationVC.data = BeerTypeDetailPopoverViewController.InfoDetailed(infoTitle: "YOUR TITLE", infoDescription: "DESCRIPTION")
+ destinationVC.data = InfoDetailPopoverViewController.InfoDetailed(infoTitle: "YOUR TITLE", infoDescription: "DESCRIPTION")
   ```
-  *And for custom transition:*
+  **And for custom transition:**
   ```
   extension ParentVC : UIViewControllerTransitioningDelegate {
     
@@ -45,3 +52,7 @@ In `perfom(segue: etc...` method you should write the following:
     }
 }
 ```
+
+*You can customize appearance and animations by check the code, it's really simple*
+
+Enjoy!
