@@ -1,6 +1,5 @@
 //
-//  BeerTypeDetailPopoverViewController.swift
-//  CraftBeer
+//  InfoDetailPopoverViewController.swift
 //
 //  Created by Anatoly Esaulov on 06.12.16.
 //  Copyright © 2016 Obanze Dev. All rights reserved.
@@ -19,7 +18,7 @@ In perform method of parentViewController you must
  dc.data = BeerTypeDetailPopoverViewController.InfoDetailed(infoTitle: "YOUR TITLE", infoDescription: "DESCRIPTION")
  ```
 */
-class BeerTypeDetailPopoverViewController: UIViewController {
+class InfoDetailPopoverViewController: UIViewController {
 
     // Used to map data
     struct InfoDetailed {
@@ -28,7 +27,7 @@ class BeerTypeDetailPopoverViewController: UIViewController {
     }
     // MARK: - Outlets
     
-    @IBOutlet weak var beerTypeDescriptionTextView: UITextView!
+    @IBOutlet weak var infoDescriptionTextView: UITextView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var closeButton: UIButton!
     
@@ -44,7 +43,7 @@ class BeerTypeDetailPopoverViewController: UIViewController {
         
         // Mapping Data
         self.titleLabel.text = data.infoTitle
-        self.beerTypeDescriptionTextView.text = data.infoDescription
+        self.infoDescriptionTextView.text = data.infoDescription
     }
     
     func appearanceSetup() {
@@ -61,7 +60,7 @@ class BeerTypeDetailPopoverViewController: UIViewController {
         
         // To scroll to top UITextView.
         // TODO: TODO: Better scrolling UITextView to TOP!
-        beerTypeDescriptionTextView.setContentOffset(CGPoint.zero, animated: true)
+        infoDescriptionTextView.setContentOffset(CGPoint.zero, animated: true)
     }
 
     override func didReceiveMemoryWarning() {
