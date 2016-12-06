@@ -20,7 +20,7 @@ It has Close button, to close the controller
     * descriptionTextView - all other space between `titleLabel` and `closeButton`
     (See the picture of my setup)
     
-    ![My image](tolushaObanze.github.com/InfoDescriptionPopoverViewController/example.png)
+    ![example](tolushaObanze.github.com/InfoDescriptionPopoverViewController/example.png)
 
 ###Storyboard Segue setup:
   * `Kind:` Present Modally
